@@ -1,0 +1,42 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html" />
+<link rel="import" href="../../bower_components/paper-card/paper-card.html" />
+<dom-module id="bookworm-detail">
+    <template>
+        <style>
+            paper-card {
+                margin: 1em;
+                padding: 0.5em;
+                width: 20em;
+                --paper-card-header-image-text : {
+                    color: white;
+                    font-weight: bold;
+                    text-shadow:  1px  1px 1px black,
+                                  1px -1px 1px black,
+                                 -1px  1px 1px black,
+                                 -1px -1px 1px black;
+                }
+            }
+            #subtitle {
+                font-size: 1.2em;
+                font-weight: bold;
+            }
+            #details {
+                font-style: italic;
+            }
+        </style>
+        <paper-card heading="{{bookdata.volumeInfo.title}}" image="{{bookdata.volumeInfo.imageLinks.thumbnail}}">
+            <div id="subtitle">{{bookdata.volumeInfo.subtitle}}</div>
+            <div id="details">{{bookdata.volumeInfo.pageCount}} Pages ({{bookdata.volumeInfo.publishedDate}})</div>
+        </paper-card>
+    </template>
+    <script>
+        Polymer({
+            is: "bookworm-detail",
+            properties: {
+                bookdata: {
+                    type: Object
+                }
+            }
+        });
+    </script>
+</dom-module>

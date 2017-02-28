@@ -1,0 +1,22 @@
+{
+  "name": "bookworm",
+  "authors": [
+    "Marcus Fihlon <marcus@fihlon.ch>"
+  ],
+  "description": "An example project for a Polymer tutorial.",
+  "main": "index.html",
+  "license": "AGPL",
+  "homepage": "https://github.com/McPringle/bookworm",
+  "private": true,
+  "ignore": [
+    "bower_components"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.8.0",
+    "paper-input": "PolymerElements/paper-input#^1.1.23",
+    "iron-ajax": "PolymerElements/iron-ajax#^1.4.3",
+    "paper-material": "PolymerElements/paper-material#^1.0.6",
+    "paper-styles": "PolymerElements/paper-styles#^1.1.5",
+    "paper-card": "PolymerElements/paper-card#^1.1.4"
+  }
+}

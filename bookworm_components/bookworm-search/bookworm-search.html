@@ -1,0 +1,30 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html" />
+<link rel="import" href="../../bower_components/iron-ajax/iron-ajax.html" />
+<link rel="import" href="../../bower_components/paper-input/paper-input.html" />
+<link rel="import" href="../../bower_components/paper-material/paper-material.html" />
+<link rel="import" href="../../bower_components/paper-styles/typography.html" />
+<link rel="import" href="../bookworm-detail/bookworm-detail.html" />
+<dom-module id="bookworm-search">
+    <template>
+        <style>
+            * {
+                @apply(--paper-font-common-base);
+            }
+            paper-material {
+                padding: 1em;
+            }
+        </style>
+        <paper-material>
+            <paper-input label="enter a search term" value="{{searchterm}}"></paper-input>
+            <iron-ajax auto url="https://www.googleapis.com/books/v1/volumes?q={{searchterm}}" handle-as="json" last-response="{{searchresult}}"></iron-ajax>
+            <template is="dom-repeat" items="{{searchresult.items}}">
+                <bookworm-detail bookdata="{{item}}"></bookworm-detail>
+            </template>
+        </paper-material>
+    </template>
+    <script>
+        Polymer({
+            is: "bookworm-search"
+        });
+    </script>
+</dom-module>
