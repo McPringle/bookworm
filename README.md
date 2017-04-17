@@ -1,7 +1,7 @@
 *Important Warning about Java-Pro article!*
 ===========================================
 
-In my article about Web Components in the first issue of the [Java-Pro magazine](http://java-pro.de) the designer made a few mistakes (replaced characters and hyphenation of source code). As a result, some code examples does not work any more. I created a PDF with corrections which you can download from my website: [Java-Pro_Korrektur.pdf](https://www.fihlon.ch/downloads/Java-Pro_Korrektur.pdf)
+In my article about Web Components in the first printed issue of the [Java-Pro magazine](http://java-pro.de) the designer made a few mistakes (replaced characters and hyphenation of source code – the online version of the tutorial is already fixed). As a result, some code examples does not work any more. I created a PDF with corrections which you can download from my website: [Java-Pro_Korrektur.pdf](https://www.fihlon.ch/downloads/Java-Pro_Korrektur.pdf)
 
 *Bookworm*
 ==========
