@@ -16,7 +16,9 @@
         </style>
         <paper-material>
             <paper-input label="enter a search term" value="{{searchterm}}"></paper-input>
-            <iron-ajax auto url="https://www.googleapis.com/books/v1/volumes?q={{searchterm}}" handle-as="json" last-response="{{searchresult}}"></iron-ajax>
+            <iron-ajax auto debounce-duration="500"
+                       url="https://www.googleapis.com/books/v1/volumes?q={{searchterm}}"
+                       handle-as="json" last-response="{{searchresult}}"></iron-ajax>
             <template is="dom-repeat" items="{{searchresult.items}}">
                 <bookworm-detail bookdata="{{item}}"></bookworm-detail>
             </template>
